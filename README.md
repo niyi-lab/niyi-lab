@@ -11,7 +11,7 @@ Computer Engineering Technology student at **NAIT**, graduating **December 2026*
 
 ## 🚗 AutoVINReveal — founder & sole developer, 2025–present
 
-A live automotive-data platform: [autovinreveal.com](https://www.autovinreveal.com)
+A live automotive-data platform: **[autovinreveal.com](https://www.autovinreveal.com)** · source: **[niyi-lab/autovinreveal](https://github.com/niyi-lab/autovinreveal)**
 
 **1,500+ active users · ~$30K in processed customer transactions**
 
