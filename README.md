@@ -1,61 +1,76 @@
-# Hi, I'm Niyi 👋
+# Oyeniyi Oyetunji
 
-Full-stack developer near Edmonton, Alberta. I build and ship production web apps end to end — Node/Express backends, Postgres, Stripe payments, and the Linux servers they run on.
+**Full-Stack Software · Embedded Systems · Industrial Automation**
+📍 Edmonton, Alberta
 
-**Currently open to junior / entry-level developer roles anywhere in Canada (remote or relocating).**
+Computer Engineering Technology student at **NAIT**, graduating **December 2026**. I work at both ends of the stack — production web apps that take real money from real customers, and the firmware and control logic running on the metal underneath.
 
----
-
-## What I've shipped
-
-Everything below is live, takes real payments, and is deployed and maintained by me.
-
-### 🚗 AutoVINReveal — [autovinreveal.com](https://www.autovinreveal.com)
-Vehicle history report platform. Enter a VIN, pay, get a full report back in seconds.
-
-- **Node + Express** API (~5,300 lines) with Helmet, CORS, compression and per-route rate limiting
-- **Supabase** (Postgres + auth) for accounts, order history and report storage
-- **Stripe** checkout and webhook handling for one-off purchases and memberships
-- Transactional email via **Nodemailer**; admin dashboard and support chat
-- A companion **Chrome extension** that picks up VINs from listing pages and links straight to a report
-- **Tailwind** front end with ~20 SEO landing pages (per-make VIN decoders, a car payment calculator, free decoder tools)
-
-### 🔧 CheapestCarFax — [cheapestcarfax.com](https://cheapestcarfax.com)
-A second brand on the same product line, running as its own service and codebase (~4,000 lines) against shared Supabase and Stripe infrastructure. Building the second one taught me most of what I know about keeping two near-identical codebases from drifting apart.
-
-### 📅 Khlin Automotive — [khlinautomotive.com](https://khlinautomotive.com)
-Booking and payments site for an auto shop.
-
-- Admin panel generates one-off **Stripe** pay links (CAD), persisted in Supabase
-- **Twilio** SMS and **SendGrid** email notifications to customers
-- Lean Express service — small, focused, and boring on purpose
-
-### 🔎 jobhunt
-A zero-dependency Node CLI that pulls ~14 job feeds, dedupes them, scores postings against a profile file, and drafts tailored cover letters, with a local dashboard.
-
-Built with deliberate limits: it never clicks submit, never fills voluntary self-identification fields, never overwrites something you've already typed, and refuses to drive LinkedIn/Indeed/Glassdoor entirely. Those aren't missing features — automating them is how you get your account banned.
+**Open to junior / entry-level roles across Canada** — remote or relocating.
 
 ---
 
-## How it all runs
+## 🚗 AutoVINReveal — founder & sole developer, 2025–present
 
-All three sites live on a single **Hetzner VPS** behind **Caddy** (automatic TLS), each as its own `systemd` service on its own port. Deploys are push-to-`main` through **GitHub Actions** — no manual SSH, no "works on my machine."
+A live automotive-data platform: [autovinreveal.com](https://www.autovinreveal.com)
+
+**1,500+ active users · ~$30K in processed customer transactions**
+
+I own the whole thing — architecture, code, payments, infrastructure, security, support, and every 2 a.m. production incident.
+
+- **Payments.** Stripe, PayPal and crypto (NOWPayments) side by side, with webhook signature verification, idempotent processing, transaction-state tracking and partial-payment handling — so a retried webhook can't double-charge a customer or issue a second report.
+- **Auth & data.** Supabase Auth and Google OAuth with protected routes and multi-role access. PostgreSQL schemas and row-level security policies covering users, orders, transactions, reports and service state.
+- **Integrations that keep moving.** Multiple vehicle-data providers plus NHTSA, with provider-switching and fallback logic for when an upstream service changes or goes down. Where no API existed, browser-emulated scraping — re-adapted each time the target site changed.
+- **Hardening.** Security audits across authentication, authorization, sensitive routes, webhook processing and data exposure. Caching layers to cut unnecessary external API traffic.
+- **Frontend.** Vanilla JS, Tailwind, jQuery/AJAX, Chart.js and hand-built SVG data visualization.
+- **Automation.** Python workers using Requests, BeautifulSoup, feedparser and IMAP — including an auto-healing Reddit keyword monitor that spots buying-intent posts and pushes them to Discord with deduplication and rate-limit backoff.
+- **Growth.** SEO, Google Ads conversion tracking, and free VIN tools built as an acquisition funnel into the paid product.
+
+**Also running:** [cheapestcarfax.com](https://cheapestcarfax.com) — a second brand on shared backend infrastructure · [khlinautomotive.com](https://khlinautomotive.com) — booking and Stripe pay-links for an auto shop, with Twilio SMS and SendGrid notifications.
+
+---
+
+## 🤖 Vehicle Inventory Auditor Rover — NAIT Capstone, 2026
+
+An autonomous rover that identifies, locates and tracks vehicles across a dealership lot.
+
+My scope: the **Raspberry Pi 5 control and AI software**, the **motor-command interface** bridging high-level control to embedded functions, and **STM32-based supervision and safety circuitry**. I designed the AI control architecture and prepared the Pi environment for tool-based commands — live AI rover control is still in development, not yet fully implemented or tested.
+
+Planned functions: movement decision-making, camera-based scene understanding, obstacle-aware navigation, vehicle and plate recognition, and writing scan results to the database. Team scope covers chassis, camera/LiDAR, the web dashboard and full-system testing.
+
+---
+
+## ⚙️ Industrial Automation & Controls
+
+Rockwell / Allen-Bradley work from academic and lab projects:
+
+**Studio 5000** (Ladder Logic + Structured Text) · **FactoryTalk View** HMI screens · **PowerFlex** VFDs · **Micro800** controllers · sequencing and state-based machine logic with safety interlocks · high-speed counters and pulse-based instrumentation · meter K-factor proving · state diagrams for equipment modelling and troubleshooting.
+
+## 🔌 Embedded & Hardware
+
+C/C++ on **STM32** and microcontrollers — GPIO, ADC, PWM, timers, interrupts, sensors, actuators, motor control. Breadboard prototyping, debugging at the hardware/software boundary with an oscilloscope and multimeter. **KiCad** schematic capture and custom PCB layout. C# desktop GUIs with GDI+.
 
 ---
 
 ## Stack
 
-**Languages** JavaScript (ES modules), SQL, HTML/CSS, Bash
-**Backend** Node.js, Express, REST APIs, webhooks, rate limiting
-**Data** Supabase, PostgreSQL
-**Payments** Stripe (Checkout, webhooks, subscriptions)
-**Frontend** Tailwind CSS, vanilla JS, Chrome extensions (Manifest V3)
-**Infra** Linux, systemd, Caddy, GitHub Actions CI/CD, Nginx-style reverse proxying
-**Integrations** Twilio, SendGrid, Nodemailer
+| | |
+|---|---|
+| **Languages** | JavaScript, Python, C, C++, C#, PHP, SQL/T-SQL, HTML/CSS |
+| **Backend** | Node.js, Express, ASP.NET Core Minimal APIs, REST, webhooks, caching, authn/authz |
+| **Data** | PostgreSQL, Supabase, MySQL, schema design, stored procedures, row-level security |
+| **Payments** | Stripe, PayPal, NOWPayments — webhooks, idempotency, transaction state |
+| **Frontend** | Vanilla JS, Tailwind, jQuery/AJAX, Chart.js, SVG viz |
+| **Embedded** | STM32, Raspberry Pi 5, GPIO/ADC/PWM, interrupts, motor control, KiCad, TCP/IP |
+| **Automation** | Studio 5000, Ladder Logic, Structured Text, FactoryTalk View, PowerFlex, Micro800 |
+| **Testing** | NUnit, generic methods, edge-case and production runtime testing |
+| **DevOps** | Git, Linux CLI, SSH, systemd, Caddy, GitHub Actions, Render, DNS/TLS |
 
 ---
 
+## What I'm actually good at
+
+End-to-end product ownership · root-cause troubleshooting under production pressure · hardware/software integration · adapting fast when a third-party API changes out from under you.
+
 ## Reach me
 
-📧 [niyiollie@gmail.com](mailto:niyiollie@gmail.com)
-📍 Edmonton area — open to remote or relocation across Canada
+📧 [niyiollie@gmail.com](mailto:niyiollie@gmail.com) · 📍 Edmonton, AB — open to remote or relocation across Canada
