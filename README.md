@@ -1,11 +1,11 @@
 # Oyeniyi Oyetunji
 
 **Full-Stack Software · Embedded Systems · Robotics · Industrial Automation**<br>
-📍 Edmonton, Alberta · 🎓 Computer Engineering Technology, NAIT (graduating December 2026)
+📍 Edmonton, Alberta · 🎓 Computer Engineering Technology, NAIT (completed December 2026)
 
 I'm a software and embedded developer with hands-on experience ranging from production web platforms to microcontroller firmware. I founded and operate **AutoVINReveal**, a vehicle-history platform with 1,500+ users and ~$30K in processed payments. I also design robotics and embedded systems on STM32 and Raspberry Pi, including an **AI-driven autonomous rover** that searches for and identifies objects.
 
-**Seeking junior / entry-level roles across Canada** (remote or relocation). Available part-time now and full-time from January 2027.
+**Seeking junior / entry-level roles across Canada** (remote or relocation). Available part-time now and full-time from December 21, 2026.
 
 | Project | Summary |
 |---|---|
@@ -43,6 +43,17 @@ Responsible for the entire product: architecture, development, payments, infrast
 ### 🤖 AI-Driven Autonomous Rover · Personal Project, 2026
 
 A four-wheel rover driven entirely by AI. Given an object to find, the AI decides where to go, drives the rover through the room, and identifies objects from its camera. All the rover's movement is controlled by the AI, while dedicated safety layers keep it from colliding with obstacles or running away if the software fails.
+
+<table>
+  <tr>
+    <td width="50%"><img src="images/rover.jpg" alt="Four-wheel rover with an RPLIDAR C1 and camera mounted on top"></td>
+    <td width="50%"><img src="images/rover-supervisor-pcb.jpg" alt="Rover Supervisor Rev B PCB with an STM32 microcontroller and USB-C"></td>
+  </tr>
+  <tr>
+    <td align="center"><sub>The rover: RPLIDAR C1 and camera on top, Raspberry Pi 5 and STM32 inside</sub></td>
+    <td align="center"><sub>Rover Supervisor PCB (Rev B), the safety controller board I designed in KiCad</sub></td>
+  </tr>
+</table>
 
 **System overview**
 - **AI control.** An AI model plans the search, issues the driving commands and identifies objects from the camera feed.
