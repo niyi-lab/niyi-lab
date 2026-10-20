@@ -44,6 +44,17 @@ Responsible for the entire product: architecture, development, payments, infrast
 
 A four-wheel rover driven entirely by AI. Given an object to find, the AI decides where to go, drives the rover through the room, and identifies objects from its camera. All the rover's movement is controlled by the AI, while dedicated safety layers keep it from colliding with obstacles or running away if the software fails.
 
+<table>
+  <tr>
+    <td width="50%"><img src="images/rover.jpg" alt="Four-wheel rover with an RPLIDAR C1 and camera mounted on top"></td>
+    <td width="50%"><img src="images/rover-supervisor-pcb.jpg" alt="Rover Supervisor Rev B PCB with an STM32 microcontroller and USB-C"></td>
+  </tr>
+  <tr>
+    <td align="center"><sub>The rover: RPLIDAR C1 and camera on top, Raspberry Pi 5 and STM32 inside</sub></td>
+    <td align="center"><sub>Rover Supervisor PCB (Rev B), the safety controller board I designed in KiCad</sub></td>
+  </tr>
+</table>
+
 **System overview**
 - **AI control.** An AI model plans the search, issues the driving commands and identifies objects from the camera feed.
 - **Mapping and localization.** ROS 2 Jazzy and SLAM Toolbox on a Raspberry Pi 5 build a map of the room from an RPLIDAR C1 and track the rover's position in it.
