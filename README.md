@@ -1,7 +1,7 @@
 # Oyeniyi Oyetunji
 
 **Full-Stack Software · Embedded Systems · Robotics · Industrial Automation**<br>
-📍 Edmonton, Alberta · 🎓 Computer Engineering Technology diploma, NAIT (program completed, diploma awarded December 2026)
+📍 Edmonton, Alberta · 🎓 Computer Engineering Technology, NAIT (completed December 2026)
 
 I'm a software and embedded developer with hands-on experience ranging from production web platforms to microcontroller firmware. I founded and operate **AutoVINReveal**, a vehicle-history platform with 1,500+ users and ~$30K in processed payments. I also design robotics and embedded systems on STM32 and Raspberry Pi, including an **AI-driven autonomous rover** that searches for and identifies objects.
 
